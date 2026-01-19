@@ -6,7 +6,7 @@ import winsound
 # Setup Screen
 wn = turtle.Screen()
 wn.bgcolor("black")
-wn.bgpic(r"C:\Users\arpit\Desktop\DOWNLOAD\Space 3.gif")
+wn.bgpic("ASSETS/Space 3.gif")
 wn.title("Cosmic Drift")
 wn.tracer(2)
 
@@ -82,10 +82,10 @@ while True:
 
     if player.xcor() > 300 or player.xcor() < -300:
         player.right(180)
-        winsound.PlaySound(r"C:\Users\arpit\Desktop\DOWNLOAD\Boundary.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("ASSETS/Boundary.wav", winsound.SND_ASYNC)
     if player.ycor() > 300 or player.ycor() < -300:
         player.right(180)
-        winsound.PlaySound(r"C:\Users\arpit\Desktop\DOWNLOAD\Boundary.wav", winsound.SND_ASYNC)
+        winsound.PlaySound("ASSETS/Boundary.wav", winsound.SND_ASYNC)
 
 # Move goal
     for count in range(maxGoals):
@@ -102,7 +102,7 @@ while True:
         if isCollision(player, goals[count] ):
             goals[count].setposition(random.randint(-300, 300), random.randint(-300, 300))
             goals[count].right(random.randint(0, 360))
-            winsound.PlaySound(r"C:\Users\arpit\Desktop\DOWNLOAD\Score.wav", winsound.SND_ASYNC)
+            winsound.PlaySound("ASSETS/Score.wav", winsound.SND_ASYNC)
             score +=1
             # Score
             mypen.undo()
