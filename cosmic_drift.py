@@ -18,6 +18,7 @@ mypen.up()
 mypen.goto(-300, -300)
 mypen.pendown()
 mypen.pensize(3)
+
 for i in range(4):
     mypen.forward(600)
     mypen.left(90)
@@ -53,7 +54,6 @@ def turnleft():
 def turnright():
     player.right(30)
 
-
 def  increasespeed():
     global speed
     speed +=1
@@ -62,7 +62,6 @@ def decreasespeed():
     global speed
     speed -=0.5
        
-
 def isCollision(t1, t2):
      d = math.sqrt(math.pow(t1.xcor() - t2.xcor(), 2)) + (math.pow(t1.ycor() - t2.ycor(),2))
      if d < 20:
@@ -70,12 +69,13 @@ def isCollision(t1, t2):
      else:
          return False
 
-# Keyboard
+# Controls
 turtle.listen()
 turtle.onkey(turnleft, "Left")
 turtle.onkey(turnright, "Right")
 turtle.onkey(increasespeed, "Up")
 turtle.onkey(decreasespeed, "Down")
+
 while True:
     player.forward(speed)
 
@@ -87,7 +87,7 @@ while True:
         player.right(180)
         winsound.PlaySound("ASSETS/Boundary.wav", winsound.SND_ASYNC)
 
-# Move goal
+# Move goals
     for count in range(maxGoals):
         goals[count].forward(3)
     
@@ -98,7 +98,7 @@ while True:
             goals[count].right(180)
            
 
-        # Collision Check
+# Collision Check
         if isCollision(player, goals[count] ):
             goals[count].setposition(random.randint(-300, 300), random.randint(-300, 300))
             goals[count].right(random.randint(0, 360))
