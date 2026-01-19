@@ -7,7 +7,7 @@ import winsound
 wn = turtle.Screen()
 wn.bgcolor("black")
 wn.bgpic(r"C:\Users\arpit\Desktop\DOWNLOAD\Space 3.gif")
-# wn.title("Cosmic Drift")
+wn.title("Cosmic Drift")
 wn.tracer(2)
 
 
