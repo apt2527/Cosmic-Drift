@@ -1,7 +1,7 @@
 import turtle
 import math
 import random
-import winsound
+# import winsound
 
 # Setup Screen
 wn = turtle.Screen()
