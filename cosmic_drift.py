@@ -8,7 +8,7 @@ wn = turtle.Screen()
 wn.bgcolor("black")
 wn.bgpic("ASSETS/Space 3.gif")
 wn.title("Cosmic Drift")
-wn.tracer(2)
+# wn.tracer(2)
 
 
 # Boundary
